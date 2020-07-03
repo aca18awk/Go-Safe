@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Safe Travel">
+  <meta name="keywords" content="Travel, Legal Travel, Travel Restriction, COVID19">
+  <meta name="author" content="Aleksandra Kulbaka">
+	<link rel="stylesheet" href="style.css">
+  <title>Go Safe </title>
+</head>
+
+<body>
+    <header>
+      <img id="logo" src="images/logo.png" alt="Logo">
+    </header>
+    
+    <main>
+
+				<form action="#" onsubmit="show();return false">
+
+          <div>
+            <p>When are you travelling?</p>
+            <input type="date" id="travel_date">
+          </div>
+
+          <div class="field">
+            <p>Where are you travelling from?</p>
+            <select id="country_from">
+              <option value="uk">UK</option>
+              <option value="france">France</option>
+              <option value="spain">Spain</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <p>Where are you travelling to?</p>
+            <select id="country_to">
+              <option value="uk">UK</option>
+              <option value="france">France</option>
+              <option value="spain">Spain</option>
+            </select>				
+          </div>
+
+          
+					<br><br>
+					<input type= "submit" name= "submit" value= "Submit" />
+
+        <script>
+            function show(){
+                document.getElementById("response").style.display = "inline";
+            }
+        </script>
+					
+				</form>
+
+        <div id="response">
+          <h2> YES, YOU CAN </h2>
+        </div>
+    </main>
+
+</body>
+</html>
