@@ -78,6 +78,23 @@ input[type=submit]:hover{
   display: none;
 }
 
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+#chatbot {
+  height:50px;
+  filter: invert();
+}
+footer {
+  float: right;
+  padding-left: 100px;
+}
 @media only screen and (max-width: 800px) {
   body 
   {

@@ -18,7 +18,7 @@
     
     <main>
 
-				<form action="#" onsubmit="show();return false">
+				<form name="countries" action="#" onsubmit="show();return false">
 
           <div>
             <p>When are you travelling?</p>
@@ -29,17 +29,15 @@
             <p>Where are you travelling from?</p>
             <select id="country_from">
               <option value="uk">UK</option>
-              <option value="france">France</option>
-              <option value="spain">Spain</option>
             </select>
           </div>
 
           <div class="field">
             <p>Where are you travelling to?</p>
             <select id="country_to">
-              <option value="uk">UK</option>
-              <option value="france">France</option>
-              <option value="spain">Spain</option>
+              <option value="UAE">UAE</option>
+              <option value="France">France</option>
+              <option value="Poland">Poland</option>
             </select>				
           </div>
 
@@ -49,15 +47,32 @@
 
         <script>
             function show(){
-                document.getElementById("response").style.display = "inline";
+              var x = document.forms["countries"]["country_to"].value;
+              if (x == "Poland") {
+                document.getElementById("response").innerHTML = "Yes, you can.";
+              }
+              else {
+                document.getElementById("response").innerHTML = "No, you cannot."
+              }
+              document.getElementById("response").style.display = "inline";
             }
         </script>
 					
 				</form>
-
+        <br>
+        <h2>
         <div id="response">
-          <h2> YES, YOU CAN </h2>
+          
         </div>
+        </h2>
+      
+      <footer>
+        <br><br>
+        <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=c9179c70-04b1-405b-9d35-efdd998c5e86&serviceInstanceID=d0052d00-0729-4ac5-a394-9280d078b338"  target="_blank">
+         <img id="chatbot" src="images/chatbot.png">
+        </a>
+      </footer>
+
     </main>
 
 </body>
