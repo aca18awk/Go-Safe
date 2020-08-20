@@ -17,17 +17,12 @@
     </header>
     
     <main>
-
-				<form method="get">
-
-            <p>Where are you travelling to?</p>
-            <select name="country_to">
-              <% @countries.each do |country| %>
-              <option value="<%= country[:country] %>"><%= country[:country] %></option>
-              <% end %>
-            </select>				
-					<input type= "submit" name= "submit" value= "Submit">			
-				</form>
+      <p>
+      This is the information on the country you selected.</p>
+				<% @all_info.each do |info| %>
+      <p> For event <%= info[:eventname] %>: <%= info[:info] %> The reference is: <%= info[:reference] %> </p>
+      <% end %>
+        </div>
     </main>
 
 </body>

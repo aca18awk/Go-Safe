@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'sqlite3'
+#require 'sqlite3'
 
 # Database safety module
 # Acts an interface been the app and an instance of SQLite3::Database
@@ -10,7 +10,7 @@ module DB
   private
 
   def initialise_new_db
-    SQLite3::Database.new './app.sqlite'
+    SQLite3::Database.new 'app.sqlite'
   end
 
   def safety_wrapper
