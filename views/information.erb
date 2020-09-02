@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Safe Travel">
+  <meta name="keywords" content="Travel, Legal Travel, Travel Restriction, COVID19">
+  <meta name="author" content="Aleksandra Kulbaka">
+	<link rel="stylesheet" href="style.css">
+  <title>Go Safe </title>
+</head>
+
+<body>
+    <header>
+      <img id="logo" src="images/logo.png" alt="Logo">
+    </header>
+    
+    <main>
+      <p>
+      This is the information on the country you selected.</p>
+				<% @all_info.each do |info| %>
+      <p> For event <%= info[:eventname] %>: <%= info[:info] %> The reference is: <%= info[:reference] %> </p>
+      <% end %>
+        </div>
+    </main>
+
+</body>
+</html>
