@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Safe Travel">
+  <meta name="keywords" content="Travel, Legal Travel, Travel Restriction, COVID19">
+  <meta name="author" content="Aleksandra Kulbaka">
+	<link rel="stylesheet" href="style.css">
+  <title>Go Safe </title>
+</head>
+
+<body>
+    <header>
+      <img id="logo" src="images/logo.png" alt="Logo">
+    </header>
+    
+    <main>
+           <p style="font-size:18px">
+           This website tells you whether you can travel during COVID-19. 
+           <br>Enter your date of travel, select your departure and arrival country and press 'Submit' to see the result.
+           <br>You can also interact with our AI chatbox below to find out information.
+           </p>
+				<form name="countries" action="#" onsubmit="show();return false">
+
+          <div>
+            <p>When are you travelling?</p>
+            <input type="date" id="travel_date">
+          </div>
+
+          <div class="field">
+            <p>Where are you travelling from?</p>
+            <select id="country_from">
+              <option value="uk">UK</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <p>Where are you travelling to?</p>
+            <select id="country_to">
+              <option value="UAE">UAE</option>
+              <option value="France">France</option>
+              <option value="Poland">Poland</option>
+            </select>				
+          </div>
+
+          
+					<br><br>
+					<input type= "submit" name= "submit" value= "Submit" />
+
+        <script>
+            function show(){
+              var x = document.forms["countries"]["country_to"].value;
+              if (x == "Poland") {
+                document.getElementById("response").innerHTML = "Yes, you can.";
+              }
+              else {
+                document.getElementById("response").innerHTML = "No, you cannot."
+              }
+              document.getElementById("response").style.display = "inline";
+            }
+        </script>
+					
+				</form>
+        <br>
+        <h2>
+        <div id="response">
+          
+        </div>
+        </h2>
+      
+      <footer>
+        <br><br>
+        <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=c9179c70-04b1-405b-9d35-efdd998c5e86&serviceInstanceID=d0052d00-0729-4ac5-a394-9280d078b338"  target="_blank">
+         <img id="chatbot" src="images/chatbot.png">
+        </a>
+      </footer>
+
+    </main>
+
+</body>
+</html>
