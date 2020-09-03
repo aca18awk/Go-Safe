@@ -6,28 +6,51 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Safe Travel">
   <meta name="keywords" content="Travel, Legal Travel, Travel Restriction, COVID19">
-  <meta name="author" content="Aleksandra Kulbaka">
-	<link rel="stylesheet" href="style.css">
-  <title>Go Safe </title>
+  <link rel="stylesheet" href="../public/style.css">
+  <link rel="icon" href="../public/images/logo.png">
+  <title>Go Safe</title>
 </head>
 
 <body>
     <header>
-      <img id="logo" src="images/logo.png" alt="Logo">
+      <img id="logo" src="../public/images/logo.png" alt="Logo of GoSafe">
     </header>
     
     <main>
+        <p>
+        Check where you can travel during COVID-19 based on the newest government information. 
+        </p>
+        <form method="get">
+        
+          <div class="field">
+            <p>Where are you travelling from?</p>
+            <select id="country_from">
+              <option value="uk">UK</option>
+            </select>
+          </div>
 
-				<form method="get">
-
+          <div class="field">
             <p>Where are you travelling to?</p>
             <select name="country_to">
               <% @countries.each do |country| %>
               <option value="<%= country[:country] %>"><%= country[:country] %></option>
               <% end %>
-            </select>				
+            </select>	
+          </div>
+
 					<input type= "submit" name= "submit" value= "Submit">			
-				</form>
+        </form>
+        
+      <footer>
+        <br>
+        GoSafe 2020 
+        <br>
+        <div id='image_licence'>
+          Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=841441" target="_blank">Free-Photos</a>
+          from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=841441" target="_blank">Pixabay</a>  
+        </div>
+      </footer>
+
     </main>
 
 </body>
